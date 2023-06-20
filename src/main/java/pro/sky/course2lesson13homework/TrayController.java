@@ -11,9 +11,9 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/store")
 @Scope(scopeName = "session")
-public class StoreController {
+public class TrayController {
 
-    final StoreService storeService = new StoreService();
+    final TrayService storeService = new TrayService();
 
     @GetMapping()
     public String welcomeToStore() {
