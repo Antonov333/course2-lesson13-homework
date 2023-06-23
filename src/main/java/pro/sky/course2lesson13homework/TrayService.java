@@ -1,13 +1,16 @@
 package pro.sky.course2lesson13homework;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 @Service
-
+@SessionScope
 public class TrayService {
 
     private List<Integer> tray = new ArrayList<>();

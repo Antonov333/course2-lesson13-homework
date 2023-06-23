@@ -1,5 +1,6 @@
 package pro.sky.course2lesson13homework;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,10 +11,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/store")
-@Scope(scopeName = "session")
 public class TrayController {
 
-    final TrayService storeService = new TrayService();
+//TrayService storeService = new TrayService();
+
+    @Autowired
+    private TrayService storeService;
 
     @GetMapping()
     public String welcomeToStore() {
